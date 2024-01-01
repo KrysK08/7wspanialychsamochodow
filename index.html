@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <title>7 Wspaniałych Samochodów</title>
+</head>
+<body>
+  <div class="header">
+<header>
+ 
+  <div id="logo">Logo Strony</div>
+
+  <nav id="main-menu">
+    <ul>
+      <li><a href="#home">Strona Główna</a></li>
+      <li><a href="#cars">Samochody</a></li>
+    </ul>
+  </nav>
+
+  <nav id="external-links-menu">
+    <ul>
+      <li><a href="https://www.autoreduta.pl/sprzedaz-samochodow" target="_blank">Kupno aut</a></li>
+      <li><a href="https://www.superauto.pl/artykuly/ranking-najbardziej-ekskluzywne-samochody-w-ofercie-superauto-pl" target="_blank">Inna lista aut</a></li>
+    </ul>
+  </nav>
+
+</header>
+</div>
+<main>
+  <section id="home">
+    <h1 class="siedemsamochodow">7 Wspaniałych Samochodów!</h1>
+    <div class="row">   
+      <div class="column">
+          <img src="foto/auto1.jpg" alt="Forest" onclick="openModal();currentSlide(1)" class="hover-shadow" style="width: 200px;">
+        <div class="desc">Rolls-Royce Phantom</div>
+      </div>
+      <div class="column">
+            <img src="foto/auto2.jfif" alt="Forest"onclick="openModal();currentSlide(2)" class="hover-shadow" style="width: 200px;">
+          <div class="desc">Bentley Mulsanne</div>
+      </div>
+      <div class="column">
+            <img src="foto/auto3.jpeg" alt="Forest"onclick="openModal();currentSlide(3)" class="hover-shadow" style="width: 200px;">
+          <div class="desc">Maybach S-Class</div>
+      </div>
+      <div class="column">
+          <img src="foto/auto4.jpg" alt="Forest"onclick="openModal();currentSlide(4)" class="hover-shadow" style="width: 200px;">
+        <div class="desc">Bugatti Chiron</div>
+        </div>
+          <div class="column">
+            <img src="foto/auto5.jpg" alt="Forest"onclick="openModal();currentSlide(5)" class="hover-shadow" style="width: 200px;">
+          <div class="desc">Aston Martin DBS Superleggera</div>
+        </div>
+        <div class="column">
+          <img src="foto/auto6.jfif" alt="Forest"onclick="openModal();currentSlide(6)" class="hover-shadow" style="width: 200px;">
+        <div class="desc">Ferrari SF90 Stradale</div>
+      </div>
+      <div class="column" >
+            <img src="foto/auto7.jpg" alt="Forest"onclick="openModal();currentSlide(7)" class="hover-shadow" style="width: 200px;">
+          <div class="desc">Lamborghini Aventador SVJ</div>
+      </div>
+    </div> 
+    
+    
+    
+    <div id="myModal" class="modal">
+      <span class="close cursor" onclick="closeModal()">&times;</span>
+      <div class="modal-content">
+    
+        <div class="mySlides">
+          <div class="numbertext">1 / 7</div>
+          <img src="foto/auto1.jpg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">2 / 7</div>
+          <img src="foto/auto2.jfif" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">3 / 7</div>
+          <img src="foto/auto3.jpeg" style="width:100%">
+        </div>
+    
+        <div class="mySlides">
+          <div class="numbertext">4 / 7</div>
+          <img src="foto/auto4.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">5 / 7</div>
+          <img src="foto/auto5.jpg" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">6 / 7</div>
+          <img src="foto/auto6.jfif" style="width:100%">
+        </div>
+
+        <div class="mySlides">
+          <div class="numbertext">7 / 7</div>
+          <img src="foto/auto7.jpg" style="width:100%">
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    
+        <div class="caption-container">
+          <p id="caption"></p>
+        </div>
+    
+        <div class="column">
+          <img class="demo" src="foto/auto1.jpg" onclick="currentSlide(1)" alt="Rolls-Royce Phantom" style="width: 200px;">
+        </div>
+    
+        <div class="column">
+          <img class="demo" src="foto/auto2.jfif" onclick="currentSlide(2)" alt="Bentley Mulsanne" style="width: 200px;">
+        </div>
+    
+        <div class="column">
+          <img class="demo" src="foto/auto3.jpeg" onclick="currentSlide(3)" alt="Maybach S-Class" style="width: 200px;">
+        </div>
+    
+        <div class="column">
+          <img class="demo" src="foto/auto4.jpg" onclick="currentSlide(4)" alt="Bugatti Chiron" style="width: 200px;">
+        </div>
+
+        <div class="column">
+          <img class="demo" src="foto/auto5.jpg" onclick="currentSlide(5)" alt="Aston Martin DBS Superleggera" style="width: 200px;">
+        </div>
+
+        <div class="column">
+          <img class="demo" src="foto/auto6.jfif" onclick="currentSlide(6)" alt="Ferrari SF90 Stradale" style="width: 200px;">
+        </div>
+
+        <div class="column">
+          <img class="demo" src="foto/auto7.jpg" onclick="currentSlide(7)" alt="Lamborghini Aventador SVJ" style="width: 200px;">
+        </div>
+      </div>
+    </div>
+    
+    <script>
+      function openModal() {
+        document.getElementById("myModal").style.display = "block";
+      }
+      
+      function closeModal() {
+        document.getElementById("myModal").style.display = "none";
+      }
+      
+      var slideIndex = 1;
+      showSlides(slideIndex);
+      
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+      
+      function currentSlide(n) {
+        showSlides(slideIndex = n);
+      }
+      
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("demo");
+        var captionText = document.getElementById("caption");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+          dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+        captionText.innerHTML = dots[slideIndex-1].alt;
+      }
+      </script>
+  </section>
+
+  <section class="homelist">
+    <h2>Nasze Wspaniałe Samochody</h2>
+<div>
+<ul>
+    <li><span>1</span>Rolls-Royce Phantom</li>
+    <li><span>2</span>Bentley Mulsanne</li>
+    <li><span>3</span>Maybach S-Class</li>
+    <li><span>4</span>Bugatti Chiron</li>
+    <li><span>5</span>Aston Martin DBS Superleggera</li>
+    <li><span>6</span>Ferrari SF90 Stradale</li>
+    <li><span>7</span>Lamborghini Aventador SVJ</li>
+
+</ul>
+</div>
+  </section>
+
+
+  <div class="container">
+    <h2>Ankieta: Wybierz swój ulubiony samochód luksusowy</h2>
+
+    <form action="#" method="post">
+        <label for="name">Imię i nazwisko:</label>
+        <input type="text" id="name" name="name" placeholder="Wprowadź imię i nazwisko..." required>
+
+        <label for="question1">Jaki samochód z tej listy Ci się najbardziej podoba?</label>
+        <select id="question1" name="question1">
+            <option value="Rolls-Royce Phantom">Rolls-Royce Phantom</option>
+            <option value="Bugatti Chiron">Bugatti Chiron</option>
+            <option value="Bentley Mulsanne">Maybach S-Class</option>
+            <option value="Maybach S-Class">Bentley Mulsanne</option>
+            <option value="Aston Martin DBS Superleggera">Aston Martin DBS Superleggera</option>
+            <option value="Ferrari SF90 Stradale">Ferrari SF90 Stradale</option>
+            <option value="Lamborghini Aventador SVJ">Lamborghini Aventador SVJ</option>
+        </select>
+
+        <label for="question2">Który samochód uważasz za najbardziej ekskluzywny?</label>
+        <select id="question2" name="question2">
+          <option value="Rolls-Royce Phantom">Rolls-Royce Phantom</option>
+          <option value="Bugatti Chiron">Bugatti Chiron</option>
+          <option value="Bentley Mulsanne">Maybach S-Class</option>
+          <option value="Maybach S-Class">Bentley Mulsanne</option>
+          <option value="Aston Martin DBS Superleggera">Aston Martin DBS Superleggera</option>
+          <option value="Ferrari SF90 Stradale">Ferrari SF90 Stradale</option>
+          <option value="Lamborghini Aventador SVJ">Lamborghini Aventador SVJ</option>
+        </select>
+
+        <label for="question3">Który samochód ma najbardziej sportowy wygląd?</label>
+        <select id="question3" name="question3">
+          <option value="Rolls-Royce Phantom">Rolls-Royce Phantom</option>
+          <option value="Bugatti Chiron">Bugatti Chiron</option>
+          <option value="Bentley Mulsanne">Maybach S-Class</option>
+          <option value="Maybach S-Class">Bentley Mulsanne</option>
+          <option value="Aston Martin DBS Superleggera">Aston Martin DBS Superleggera</option>
+          <option value="Ferrari SF90 Stradale">Ferrari SF90 Stradale</option>
+          <option value="Lamborghini Aventador SVJ">Lamborghini Aventador SVJ</option>
+        </select>
+
+        <label for="question4">Który samochód wybrałbyś jako pojazd do codziennego użytku?</label>
+        <select id="question4" name="question4">
+          <option value="Rolls-Royce Phantom">Rolls-Royce Phantom</option>
+          <option value="Bugatti Chiron">Bugatti Chiron</option>
+          <option value="Bentley Mulsanne">Maybach S-Class</option>
+          <option value="Maybach S-Class">Bentley Mulsanne</option>
+          <option value="Aston Martin DBS Superleggera">Aston Martin DBS Superleggera</option>
+          <option value="Ferrari SF90 Stradale">Ferrari SF90 Stradale</option>
+          <option value="Lamborghini Aventador SVJ">Lamborghini Aventador SVJ</option>
+        </select>
+
+        <input type="submit" value="Wyślij">
+    </form>
+</div>
+<div class="table">
+<table>
+  <thead>
+      <tr>
+          <th>Samochód</th>
+          <th>Luksus</th>
+          <th>Prędkość</th>
+          <th>Design</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Rolls-Royce Phantom</td>
+          <td>*****</td>
+          <td>***</td>
+          <td>*****</td>
+      </tr>
+      <tr>
+          <td>Bugatti Chiron</td>
+          <td>****</td>
+          <td>*****</td>
+          <td>****</td>
+      </tr>
+      <tr>
+          <td>Bentley Mulsanne</td>
+          <td>*****</td>
+          <td>***</td>
+          <td>****</td>
+      </tr>
+      <tr>
+          <td>Lamborghini Aventador SVJ</td>
+          <td>****</td>
+          <td>*****</td>
+          <td>*****</td>
+      </tr>
+      <tr>
+          <td>Maybach S650</td>
+          <td>*****</td>
+          <td>***</td>
+          <td>****</td>
+      </tr>
+      <tr>
+          <td>Ferrari LaFerrari</td>
+          <td>****</td>
+          <td>*****</td>
+          <td>*****</td>
+      </tr>
+      <tr>
+          <td>Aston Martin DBS Superleggera</td>
+          <td>****</td>
+          <td>****</td>
+          <td>****</td>
+      </tr>
+  </tbody>
+</table>
+</div>
+</main>
+<div class="footer">
+<footer>
+  <p>© Krystyna Krowicka | 2tc</p>
+</footer>
+</div>
+</body>
+</html>
